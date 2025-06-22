@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create the addTask function
     function addTask(taskText, save = true) {
-        const trimmedText = taskText.trim();
+        const trimmedText = taskInput.value.trim();
         if (!trimmedText) {
             alert('Please enter a task.');
             return;
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     addButton.addEventListener('click', () => addTask(taskInput.value));
     taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
-            addTask(taskInput.value.trim);
+            addTask(taskInput.value);
         }
     });
 
